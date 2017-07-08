@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6FD2F9071F10F7FE00B3E4AA /* SPFFavoriteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD2F9061F10F7FE00B3E4AA /* SPFFavoriteCell.m */; };
+		8A3457B0F58B4FDB3C8F266E /* libPods-ShowFlicrImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803E13CDC74E31FFFA27B8FE /* libPods-ShowFlicrImage.a */; };
+		9224523F1EDB00A60020BCB0 /* NSCacheSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452301EDB00A60020BCB0 /* NSCacheSingleton.m */; };
+		922452401EDB00A60020BCB0 /* SPFCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452321EDB00A60020BCB0 /* SPFCustomCell.m */; };
+		922452411EDB00A60020BCB0 /* SPFDownloadingPictureOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452341EDB00A60020BCB0 /* SPFDownloadingPictureOperation.m */; };
+		922452421EDB00A60020BCB0 /* SPFFiltrationPictureOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452361EDB00A60020BCB0 /* SPFFiltrationPictureOperation.m */; };
+		922452441EDB00A60020BCB0 /* SPFPendingOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 9224523A1EDB00A60020BCB0 /* SPFPendingOperations.m */; };
+		922452451EDB00A60020BCB0 /* SPFPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9224523C1EDB00A60020BCB0 /* SPFPicture.m */; };
+		922452461EDB00A60020BCB0 /* SPFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9224523E1EDB00A60020BCB0 /* SPFViewController.m */; };
+		9224524A1EDB38430020BCB0 /* PinterestLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452491EDB38430020BCB0 /* PinterestLayout.m */; };
+		922452561EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452551EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m */; };
+		922452591EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452581EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m */; };
+		9224525C1EDCC6F40020BCB0 /* SPFDispetcherOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9224525B1EDCC6F40020BCB0 /* SPFDispetcherOperation.m */; };
+		9224525F1EDF0B730020BCB0 /* SPFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9224525E1EDF0B730020BCB0 /* SPFDetailViewController.m */; };
+		922452621EDF26540020BCB0 /* SPFGetDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452611EDF26540020BCB0 /* SPFGetDetailInfo.m */; };
+		922452651EDF311F0020BCB0 /* SPFCustomCellImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452641EDF311F0020BCB0 /* SPFCustomCellImage.m */; };
+		922452681EDF4D000020BCB0 /* SPFDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452671EDF4D000020BCB0 /* SPFDetailView.m */; };
+		9242F98F1EE57021007FA9A8 /* UIImage+CroppingImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9242F98E1EE57021007FA9A8 /* UIImage+CroppingImage.m */; };
+		92507C331F0A904300645D95 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 92507C321F0A904300645D95 /* CoreDataStack.m */; };
+		92507C351F0A93CE00645D95 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92507C341F0A93CE00645D95 /* CoreData.framework */; };
+		92ABCA7B1EE014DF00C2F52B /* SPFTopNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABCA7A1EE014DF00C2F52B /* SPFTopNavigationView.m */; };
+		92ABCA841EE1413600C2F52B /* SPFCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABCA831EE1413600C2F52B /* SPFCommentCell.m */; };
+		92ABCA871EE14A3700C2F52B /* UIColor+SPFColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABCA861EE14A3700C2F52B /* UIColor+SPFColors.m */; };
+		92ABCA8A1EE150F100C2F52B /* NSURL+Caching.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABCA891EE150F100C2F52B /* NSURL+Caching.m */; };
+		92ABCA8D1EE164CC00C2F52B /* SPFGetCommentsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABCA8C1EE164CC00C2F52B /* SPFGetCommentsOperation.m */; };
+		92ABCA901EE16A9E00C2F52B /* SPFComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABCA8F1EE16A9E00C2F52B /* SPFComment.m */; };
+		92ABCA931EE1FE2800C2F52B /* SPFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABCA921EE1FE2800C2F52B /* SPFUser.m */; };
+		92ABCA961EE2052800C2F52B /* SPFGetDetailsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABCA951EE2052800C2F52B /* SPFGetDetailsOperation.m */; };
+		92ABCA9C1EE414BD00C2F52B /* SPFPinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABCA9B1EE414BD00C2F52B /* SPFPinchViewController.m */; };
+		92B58A5D1EDA0796009E470D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B58A5C1EDA0796009E470D /* main.m */; };
+		92B58A601EDA0796009E470D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B58A5F1EDA0796009E470D /* AppDelegate.m */; };
+		92B58A661EDA0796009E470D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B58A651EDA0796009E470D /* SecondViewController.m */; };
+		92B58A6B1EDA0796009E470D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92B58A6A1EDA0796009E470D /* Assets.xcassets */; };
+		A84D136F1F0D53A500DFD3BE /* SPFCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A84D136E1F0D53A500DFD3BE /* SPFCoreDataStack.m */; };
+		A84D13751F0E34B900DFD3BE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A84D13731F0E34B900DFD3BE /* Model.xcdatamodeld */; };
+		A84D137F1F0E3C1000DFD3BE /* SPFPictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A84D137E1F0E3C1000DFD3BE /* SPFPictureModel.m */; };
+		A84D13831F0E601A00DFD3BE /* SPFCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = A84D13821F0E601A00DFD3BE /* SPFCoreDataService.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6FD2F9031F10B19300B3E4AA /* Model 7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 7.xcdatamodel"; sourceTree = "<group>"; };
+		6FD2F9041F10F44C00B3E4AA /* Model 8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 8.xcdatamodel"; sourceTree = "<group>"; };
+		6FD2F9051F10F7FE00B3E4AA /* SPFFavoriteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFFavoriteCell.h; sourceTree = "<group>"; };
+		6FD2F9061F10F7FE00B3E4AA /* SPFFavoriteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFFavoriteCell.m; sourceTree = "<group>"; };
+		6FD2F9081F110A1600B3E4AA /* Model 9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 9.xcdatamodel"; sourceTree = "<group>"; };
+		7E04E4A85DA33BF94C13673E /* Pods-ShowFlicrImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowFlicrImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowFlicrImage/Pods-ShowFlicrImage.release.xcconfig"; sourceTree = "<group>"; };
+		803E13CDC74E31FFFA27B8FE /* libPods-ShowFlicrImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowFlicrImage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9224522F1EDB00A60020BCB0 /* NSCacheSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCacheSingleton.h; sourceTree = "<group>"; };
+		922452301EDB00A60020BCB0 /* NSCacheSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCacheSingleton.m; sourceTree = "<group>"; };
+		922452311EDB00A60020BCB0 /* SPFCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFCustomCell.h; path = ShowFlicrImage/SPFCustomCell.h; sourceTree = "<group>"; };
+		922452321EDB00A60020BCB0 /* SPFCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFCustomCell.m; path = ShowFlicrImage/SPFCustomCell.m; sourceTree = "<group>"; };
+		922452331EDB00A60020BCB0 /* SPFDownloadingPictureOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFDownloadingPictureOperation.h; path = ShowFlicrImage/SPFDownloadingPictureOperation.h; sourceTree = "<group>"; };
+		922452341EDB00A60020BCB0 /* SPFDownloadingPictureOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFDownloadingPictureOperation.m; path = ShowFlicrImage/SPFDownloadingPictureOperation.m; sourceTree = "<group>"; };
+		922452351EDB00A60020BCB0 /* SPFFiltrationPictureOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFFiltrationPictureOperation.h; sourceTree = "<group>"; };
+		922452361EDB00A60020BCB0 /* SPFFiltrationPictureOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFFiltrationPictureOperation.m; sourceTree = "<group>"; };
+		922452391EDB00A60020BCB0 /* SPFPendingOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFPendingOperations.h; path = ShowFlicrImage/SPFPendingOperations.h; sourceTree = "<group>"; };
+		9224523A1EDB00A60020BCB0 /* SPFPendingOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFPendingOperations.m; path = ShowFlicrImage/SPFPendingOperations.m; sourceTree = "<group>"; };
+		9224523B1EDB00A60020BCB0 /* SPFPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFPicture.h; path = ShowFlicrImage/SPFPicture.h; sourceTree = "<group>"; };
+		9224523C1EDB00A60020BCB0 /* SPFPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFPicture.m; path = ShowFlicrImage/SPFPicture.m; sourceTree = "<group>"; };
+		9224523D1EDB00A60020BCB0 /* SPFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFViewController.h; path = ShowFlicrImage/SPFViewController.h; sourceTree = "<group>"; };
+		9224523E1EDB00A60020BCB0 /* SPFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFViewController.m; path = ShowFlicrImage/SPFViewController.m; sourceTree = "<group>"; };
+		922452481EDB38430020BCB0 /* PinterestLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinterestLayout.h; sourceTree = "<group>"; };
+		922452491EDB38430020BCB0 /* PinterestLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinterestLayout.m; sourceTree = "<group>"; };
+		922452541EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFGetListOfPicturesOperation.h; path = ShowFlicrImage/SPFGetListOfPicturesOperation.h; sourceTree = "<group>"; };
+		922452551EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFGetListOfPicturesOperation.m; path = ShowFlicrImage/SPFGetListOfPicturesOperation.m; sourceTree = "<group>"; };
+		922452571EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFGetFavoriteCountOperation.h; sourceTree = "<group>"; };
+		922452581EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFGetFavoriteCountOperation.m; sourceTree = "<group>"; };
+		9224525A1EDCC6F40020BCB0 /* SPFDispetcherOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFDispetcherOperation.h; path = ShowFlicrImage/SPFDispetcherOperation.h; sourceTree = "<group>"; };
+		9224525B1EDCC6F40020BCB0 /* SPFDispetcherOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFDispetcherOperation.m; path = ShowFlicrImage/SPFDispetcherOperation.m; sourceTree = "<group>"; };
+		9224525D1EDF0B730020BCB0 /* SPFDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFDetailViewController.h; path = ShowFlicrImage/SPFDetailViewController.h; sourceTree = "<group>"; };
+		9224525E1EDF0B730020BCB0 /* SPFDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFDetailViewController.m; path = ShowFlicrImage/SPFDetailViewController.m; sourceTree = "<group>"; };
+		922452601EDF26540020BCB0 /* SPFGetDetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFGetDetailInfo.h; sourceTree = "<group>"; };
+		922452611EDF26540020BCB0 /* SPFGetDetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFGetDetailInfo.m; sourceTree = "<group>"; };
+		922452631EDF311F0020BCB0 /* SPFCustomCellImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFCustomCellImage.h; sourceTree = "<group>"; };
+		922452641EDF311F0020BCB0 /* SPFCustomCellImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFCustomCellImage.m; sourceTree = "<group>"; };
+		922452661EDF4D000020BCB0 /* SPFDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFDetailView.h; sourceTree = "<group>"; };
+		922452671EDF4D000020BCB0 /* SPFDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFDetailView.m; sourceTree = "<group>"; };
+		9242F98D1EE57021007FA9A8 /* UIImage+CroppingImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CroppingImage.h"; sourceTree = "<group>"; };
+		9242F98E1EE57021007FA9A8 /* UIImage+CroppingImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CroppingImage.m"; sourceTree = "<group>"; };
+		92507C311F0A904300645D95 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		92507C321F0A904300645D95 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		92507C341F0A93CE00645D95 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		92ABCA791EE014DF00C2F52B /* SPFTopNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFTopNavigationView.h; sourceTree = "<group>"; };
+		92ABCA7A1EE014DF00C2F52B /* SPFTopNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFTopNavigationView.m; sourceTree = "<group>"; };
+		92ABCA821EE1413600C2F52B /* SPFCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFCommentCell.h; sourceTree = "<group>"; };
+		92ABCA831EE1413600C2F52B /* SPFCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFCommentCell.m; sourceTree = "<group>"; };
+		92ABCA851EE14A3700C2F52B /* UIColor+SPFColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SPFColors.h"; sourceTree = "<group>"; };
+		92ABCA861EE14A3700C2F52B /* UIColor+SPFColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SPFColors.m"; sourceTree = "<group>"; };
+		92ABCA881EE150F100C2F52B /* NSURL+Caching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Caching.h"; sourceTree = "<group>"; };
+		92ABCA891EE150F100C2F52B /* NSURL+Caching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Caching.m"; sourceTree = "<group>"; };
+		92ABCA8B1EE164CC00C2F52B /* SPFGetCommentsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFGetCommentsOperation.h; sourceTree = "<group>"; };
+		92ABCA8C1EE164CC00C2F52B /* SPFGetCommentsOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFGetCommentsOperation.m; sourceTree = "<group>"; };
+		92ABCA8E1EE16A9E00C2F52B /* SPFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFComment.h; sourceTree = "<group>"; };
+		92ABCA8F1EE16A9E00C2F52B /* SPFComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFComment.m; sourceTree = "<group>"; };
+		92ABCA911EE1FE2800C2F52B /* SPFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFUser.h; sourceTree = "<group>"; };
+		92ABCA921EE1FE2800C2F52B /* SPFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFUser.m; sourceTree = "<group>"; };
+		92ABCA941EE2052800C2F52B /* SPFGetDetailsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFGetDetailsOperation.h; sourceTree = "<group>"; };
+		92ABCA951EE2052800C2F52B /* SPFGetDetailsOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFGetDetailsOperation.m; sourceTree = "<group>"; };
+		92ABCA9A1EE414BD00C2F52B /* SPFPinchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFPinchViewController.h; sourceTree = "<group>"; };
+		92ABCA9B1EE414BD00C2F52B /* SPFPinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFPinchViewController.m; sourceTree = "<group>"; };
+		92B58A581EDA0796009E470D /* ShowFlicrImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowFlicrImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B58A5C1EDA0796009E470D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92B58A5E1EDA0796009E470D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		92B58A5F1EDA0796009E470D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		92B58A641EDA0796009E470D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ShowFlicrImage/SecondViewController.h; sourceTree = "<group>"; };
+		92B58A651EDA0796009E470D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ShowFlicrImage/SecondViewController.m; sourceTree = "<group>"; };
+		92B58A6A1EDA0796009E470D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92B58A6F1EDA0796009E470D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		962C6D784626745EDE5082D3 /* Pods-ShowFlicrImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowFlicrImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowFlicrImage/Pods-ShowFlicrImage.debug.xcconfig"; sourceTree = "<group>"; };
+		A84D136D1F0D53A500DFD3BE /* SPFCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFCoreDataStack.h; sourceTree = "<group>"; };
+		A84D136E1F0D53A500DFD3BE /* SPFCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFCoreDataStack.m; sourceTree = "<group>"; };
+		A84D13741F0E34B900DFD3BE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A84D137D1F0E3C1000DFD3BE /* SPFPictureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFPictureModel.h; sourceTree = "<group>"; };
+		A84D137E1F0E3C1000DFD3BE /* SPFPictureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFPictureModel.m; sourceTree = "<group>"; };
+		A84D13811F0E601A00DFD3BE /* SPFCoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFCoreDataService.h; sourceTree = "<group>"; };
+		A84D13821F0E601A00DFD3BE /* SPFCoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFCoreDataService.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92B58A551EDA0796009E470D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92507C351F0A93CE00645D95 /* CoreData.framework in Frameworks */,
+				8A3457B0F58B4FDB3C8F266E /* libPods-ShowFlicrImage.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		627761C6E85FFD3B9FD88C9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92507C341F0A93CE00645D95 /* CoreData.framework */,
+				803E13CDC74E31FFFA27B8FE /* libPods-ShowFlicrImage.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92ABCA7D1EE1377E00C2F52B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				922452631EDF311F0020BCB0 /* SPFCustomCellImage.h */,
+				922452641EDF311F0020BCB0 /* SPFCustomCellImage.m */,
+				92ABCA821EE1413600C2F52B /* SPFCommentCell.h */,
+				92ABCA831EE1413600C2F52B /* SPFCommentCell.m */,
+				922452311EDB00A60020BCB0 /* SPFCustomCell.h */,
+				922452321EDB00A60020BCB0 /* SPFCustomCell.m */,
+				922452481EDB38430020BCB0 /* PinterestLayout.h */,
+				922452491EDB38430020BCB0 /* PinterestLayout.m */,
+				922452661EDF4D000020BCB0 /* SPFDetailView.h */,
+				922452671EDF4D000020BCB0 /* SPFDetailView.m */,
+				92ABCA791EE014DF00C2F52B /* SPFTopNavigationView.h */,
+				92ABCA7A1EE014DF00C2F52B /* SPFTopNavigationView.m */,
+				6FD2F9051F10F7FE00B3E4AA /* SPFFavoriteCell.h */,
+				6FD2F9061F10F7FE00B3E4AA /* SPFFavoriteCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		92ABCA7E1EE137C900C2F52B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9224523D1EDB00A60020BCB0 /* SPFViewController.h */,
+				9224523E1EDB00A60020BCB0 /* SPFViewController.m */,
+				92B58A641EDA0796009E470D /* SecondViewController.h */,
+				92B58A651EDA0796009E470D /* SecondViewController.m */,
+				9224525D1EDF0B730020BCB0 /* SPFDetailViewController.h */,
+				9224525E1EDF0B730020BCB0 /* SPFDetailViewController.m */,
+				92ABCA9A1EE414BD00C2F52B /* SPFPinchViewController.h */,
+				92ABCA9B1EE414BD00C2F52B /* SPFPinchViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		92ABCA801EE1385A00C2F52B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9224523B1EDB00A60020BCB0 /* SPFPicture.h */,
+				9224523C1EDB00A60020BCB0 /* SPFPicture.m */,
+				92ABCA8E1EE16A9E00C2F52B /* SPFComment.h */,
+				92ABCA8F1EE16A9E00C2F52B /* SPFComment.m */,
+				92ABCA911EE1FE2800C2F52B /* SPFUser.h */,
+				92ABCA921EE1FE2800C2F52B /* SPFUser.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		92ABCA811EE138FA00C2F52B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				922452331EDB00A60020BCB0 /* SPFDownloadingPictureOperation.h */,
+				922452341EDB00A60020BCB0 /* SPFDownloadingPictureOperation.m */,
+				922452391EDB00A60020BCB0 /* SPFPendingOperations.h */,
+				9224523A1EDB00A60020BCB0 /* SPFPendingOperations.m */,
+				922452541EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.h */,
+				922452551EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m */,
+				9224525A1EDCC6F40020BCB0 /* SPFDispetcherOperation.h */,
+				9224525B1EDCC6F40020BCB0 /* SPFDispetcherOperation.m */,
+				92ABCA8B1EE164CC00C2F52B /* SPFGetCommentsOperation.h */,
+				92ABCA8C1EE164CC00C2F52B /* SPFGetCommentsOperation.m */,
+				92ABCA941EE2052800C2F52B /* SPFGetDetailsOperation.h */,
+				92ABCA951EE2052800C2F52B /* SPFGetDetailsOperation.m */,
+				92507C311F0A904300645D95 /* CoreDataStack.h */,
+				92507C321F0A904300645D95 /* CoreDataStack.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		92B58A4F1EDA0796009E470D = {
+			isa = PBXGroup;
+			children = (
+				9242F98D1EE57021007FA9A8 /* UIImage+CroppingImage.h */,
+				9242F98E1EE57021007FA9A8 /* UIImage+CroppingImage.m */,
+				92ABCA881EE150F100C2F52B /* NSURL+Caching.h */,
+				92ABCA891EE150F100C2F52B /* NSURL+Caching.m */,
+				92ABCA851EE14A3700C2F52B /* UIColor+SPFColors.h */,
+				92ABCA861EE14A3700C2F52B /* UIColor+SPFColors.m */,
+				A84D13801F0E5ACA00DFD3BE /* CoreData */,
+				92ABCA811EE138FA00C2F52B /* Service */,
+				92ABCA801EE1385A00C2F52B /* Model */,
+				92ABCA7E1EE137C900C2F52B /* Controller */,
+				92ABCA7D1EE1377E00C2F52B /* View */,
+				922452601EDF26540020BCB0 /* SPFGetDetailInfo.h */,
+				922452611EDF26540020BCB0 /* SPFGetDetailInfo.m */,
+				92B58A5A1EDA0796009E470D /* ShowFlicrImage */,
+				92B58A591EDA0796009E470D /* Products */,
+				9D73C6BCB3C3544123FD44AF /* Pods */,
+				627761C6E85FFD3B9FD88C9F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		92B58A591EDA0796009E470D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92B58A581EDA0796009E470D /* ShowFlicrImage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92B58A5A1EDA0796009E470D /* ShowFlicrImage */ = {
+			isa = PBXGroup;
+			children = (
+				9224522F1EDB00A60020BCB0 /* NSCacheSingleton.h */,
+				922452301EDB00A60020BCB0 /* NSCacheSingleton.m */,
+				922452351EDB00A60020BCB0 /* SPFFiltrationPictureOperation.h */,
+				922452361EDB00A60020BCB0 /* SPFFiltrationPictureOperation.m */,
+				92B58A5E1EDA0796009E470D /* AppDelegate.h */,
+				92B58A5F1EDA0796009E470D /* AppDelegate.m */,
+				92B58A6A1EDA0796009E470D /* Assets.xcassets */,
+				92B58A6F1EDA0796009E470D /* Info.plist */,
+				92B58A5B1EDA0796009E470D /* Supporting Files */,
+				922452571EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.h */,
+				922452581EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m */,
+			);
+			path = ShowFlicrImage;
+			sourceTree = "<group>";
+		};
+		92B58A5B1EDA0796009E470D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92B58A5C1EDA0796009E470D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D73C6BCB3C3544123FD44AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				962C6D784626745EDE5082D3 /* Pods-ShowFlicrImage.debug.xcconfig */,
+				7E04E4A85DA33BF94C13673E /* Pods-ShowFlicrImage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A84D13801F0E5ACA00DFD3BE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A84D13731F0E34B900DFD3BE /* Model.xcdatamodeld */,
+				A84D136D1F0D53A500DFD3BE /* SPFCoreDataStack.h */,
+				A84D136E1F0D53A500DFD3BE /* SPFCoreDataStack.m */,
+				A84D137D1F0E3C1000DFD3BE /* SPFPictureModel.h */,
+				A84D137E1F0E3C1000DFD3BE /* SPFPictureModel.m */,
+				A84D13811F0E601A00DFD3BE /* SPFCoreDataService.h */,
+				A84D13821F0E601A00DFD3BE /* SPFCoreDataService.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92B58A571EDA0796009E470D /* ShowFlicrImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92B58A721EDA0796009E470D /* Build configuration list for PBXNativeTarget "ShowFlicrImage" */;
+			buildPhases = (
+				5A394215B9E1202A83F59483 /* [CP] Check Pods Manifest.lock */,
+				92B58A541EDA0796009E470D /* Sources */,
+				92B58A551EDA0796009E470D /* Frameworks */,
+				92B58A561EDA0796009E470D /* Resources */,
+				BE67BAC160B22952B8685AD9 /* [CP] Embed Pods Frameworks */,
+				34BBFA0516E0AD7317F5450F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShowFlicrImage;
+			productName = ShowFlicrImage;
+			productReference = 92B58A581EDA0796009E470D /* ShowFlicrImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92B58A501EDA0796009E470D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Julia Sharaeva";
+				TargetAttributes = {
+					92B58A571EDA0796009E470D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = P85JQ5XGQC;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 92B58A531EDA0796009E470D /* Build configuration list for PBXProject "ShowFlicrImage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92B58A4F1EDA0796009E470D;
+			productRefGroup = 92B58A591EDA0796009E470D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92B58A571EDA0796009E470D /* ShowFlicrImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92B58A561EDA0796009E470D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92B58A6B1EDA0796009E470D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34BBFA0516E0AD7317F5450F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShowFlicrImage/Pods-ShowFlicrImage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A394215B9E1202A83F59483 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE67BAC160B22952B8685AD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShowFlicrImage/Pods-ShowFlicrImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92B58A541EDA0796009E470D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92ABCA871EE14A3700C2F52B /* UIColor+SPFColors.m in Sources */,
+				922452561EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m in Sources */,
+				A84D137F1F0E3C1000DFD3BE /* SPFPictureModel.m in Sources */,
+				92B58A661EDA0796009E470D /* SecondViewController.m in Sources */,
+				92ABCA9C1EE414BD00C2F52B /* SPFPinchViewController.m in Sources */,
+				92ABCA901EE16A9E00C2F52B /* SPFComment.m in Sources */,
+				92507C331F0A904300645D95 /* CoreDataStack.m in Sources */,
+				9224523F1EDB00A60020BCB0 /* NSCacheSingleton.m in Sources */,
+				922452401EDB00A60020BCB0 /* SPFCustomCell.m in Sources */,
+				922452651EDF311F0020BCB0 /* SPFCustomCellImage.m in Sources */,
+				922452451EDB00A60020BCB0 /* SPFPicture.m in Sources */,
+				9224525C1EDCC6F40020BCB0 /* SPFDispetcherOperation.m in Sources */,
+				922452621EDF26540020BCB0 /* SPFGetDetailInfo.m in Sources */,
+				92B58A601EDA0796009E470D /* AppDelegate.m in Sources */,
+				92ABCA961EE2052800C2F52B /* SPFGetDetailsOperation.m in Sources */,
+				922452421EDB00A60020BCB0 /* SPFFiltrationPictureOperation.m in Sources */,
+				92ABCA931EE1FE2800C2F52B /* SPFUser.m in Sources */,
+				92ABCA841EE1413600C2F52B /* SPFCommentCell.m in Sources */,
+				922452681EDF4D000020BCB0 /* SPFDetailView.m in Sources */,
+				92ABCA8D1EE164CC00C2F52B /* SPFGetCommentsOperation.m in Sources */,
+				922452591EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m in Sources */,
+				92ABCA8A1EE150F100C2F52B /* NSURL+Caching.m in Sources */,
+				922452441EDB00A60020BCB0 /* SPFPendingOperations.m in Sources */,
+				A84D13831F0E601A00DFD3BE /* SPFCoreDataService.m in Sources */,
+				9224524A1EDB38430020BCB0 /* PinterestLayout.m in Sources */,
+				922452411EDB00A60020BCB0 /* SPFDownloadingPictureOperation.m in Sources */,
+				92ABCA7B1EE014DF00C2F52B /* SPFTopNavigationView.m in Sources */,
+				922452461EDB00A60020BCB0 /* SPFViewController.m in Sources */,
+				A84D13751F0E34B900DFD3BE /* Model.xcdatamodeld in Sources */,
+				A84D136F1F0D53A500DFD3BE /* SPFCoreDataStack.m in Sources */,
+				92B58A5D1EDA0796009E470D /* main.m in Sources */,
+				6FD2F9071F10F7FE00B3E4AA /* SPFFavoriteCell.m in Sources */,
+				9224525F1EDF0B730020BCB0 /* SPFDetailViewController.m in Sources */,
+				9242F98F1EE57021007FA9A8 /* UIImage+CroppingImage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		92B58A701EDA0796009E470D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		92B58A711EDA0796009E470D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92B58A731EDA0796009E470D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 962C6D784626745EDE5082D3 /* Pods-ShowFlicrImage.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P85JQ5XGQC;
+				INFOPLIST_FILE = ShowFlicrImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.ShowFlicrImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		92B58A741EDA0796009E470D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E04E4A85DA33BF94C13673E /* Pods-ShowFlicrImage.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P85JQ5XGQC;
+				INFOPLIST_FILE = ShowFlicrImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.ShowFlicrImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92B58A531EDA0796009E470D /* Build configuration list for PBXProject "ShowFlicrImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92B58A701EDA0796009E470D /* Debug */,
+				92B58A711EDA0796009E470D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92B58A721EDA0796009E470D /* Build configuration list for PBXNativeTarget "ShowFlicrImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92B58A731EDA0796009E470D /* Debug */,
+				92B58A741EDA0796009E470D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A84D13731F0E34B900DFD3BE /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6FD2F9081F110A1600B3E4AA /* Model 9.xcdatamodel */,
+				6FD2F9041F10F44C00B3E4AA /* Model 8.xcdatamodel */,
+				6FD2F9031F10B19300B3E4AA /* Model 7.xcdatamodel */,
+				A84D13741F0E34B900DFD3BE /* Model.xcdatamodel */,
+			);
+			currentVersion = 6FD2F9081F110A1600B3E4AA /* Model 9.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 92B58A501EDA0796009E470D /* Project object */;
+}
