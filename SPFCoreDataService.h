@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 @import CoreData;
 @class SPFPicture;
-
+@class SPFPictureModel;
 typedef void(^block) (NSArray *);
 
 @interface SPFCoreDataService : NSObject
 - (void)getFavoritePicturesWithCompletionBlock:(block) block;
 - (void)setPictureToFavorite:(SPFPicture *) picture;
 - (NSString *)getPathForSavingImage:(NSString *)imgId;
+- (void)removePicturesFromFavorite:(NSArray<NSString *> *)picturesId;
 @end
