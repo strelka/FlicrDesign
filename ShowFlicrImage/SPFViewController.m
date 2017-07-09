@@ -34,12 +34,8 @@
 @property (nonatomic, strong) UICollectionView* collectionView;
 
 @property (nonatomic, strong) PinterestLayout *layout;
-@property (nonatomic) CGSize size;
-
 
 @property (nonatomic, strong) NSArray *cellSizes;
-@property (nonatomic, strong) NSArray *colors;
-
 @property (nonatomic, strong) NSString *searchText;
 @property (nonatomic, strong) SPFCoreDataService *storageService;
 @end
@@ -65,7 +61,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _size = self.view.bounds.size;
     _searchObject = [[NSMutableDictionary alloc] initWithObjects:@[@1, @""] forKeys:@[@"page", @"textForSearch"]];
     loadingNewPage = NO;
     
@@ -73,62 +68,80 @@
     
     _layout = [[PinterestLayout alloc] init];
     
-    _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:_layout];
-    _collectionView.delegate = self;
-    _collectionView.dataSource = self;
-    _collectionView.backgroundColor = [UIColor whiteColor];
     
-    [_collectionView registerClass:[SPFCustomCell class]
-        forCellWithReuseIdentifier:@"SPFCellIdentifier"];
+    [self.view addSubview:self.collectionView];
     
-    [self.view addSubview:_collectionView];
-    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
     
+    self.navigationItem.titleView = [self searchBar];
+    self.navigationItem.rightBarButtonItem = [self settingsButton];
+}
+
+- (UIBarButtonItem *)settingsButton{
+    UIImage *buttonImage = [UIImage imageNamed:@"icSettings"];
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:buttonImage
+                                                                 style:UIBarButtonItemStyleDone
+                                                                target:self
+                                                                action:nil];
+    return settingsButton;
+}
+- (UISearchBar *)searchBar{
     UISearchBar *searchBar = [[UISearchBar alloc] init];
     searchBar.delegate = self;
     searchBar.placeholder = @"Поиск";
     [searchBar setSearchFieldBackgroundImage:[UIImage imageNamed:@"rectangle121"] forState:UIControlStateNormal];
-    
-    UIButton *settings = [[UIButton alloc] init];
-    [settings setImage:[UIImage imageNamed:@"icSettings"] forState:UIControlStateNormal];
-    
-    self.navigationItem.titleView = searchBar;
-    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icSettings"] style:UIBarButtonItemStyleDone target:self action:nil];
-    self.navigationItem.rightBarButtonItem = rightBtn;
+    return searchBar;
+}
+
+- (UICollectionView *)collectionView{
+    if (!_collectionView){
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:_layout];
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        [_collectionView registerClass:[SPFCustomCell class]
+            forCellWithReuseIdentifier:NSStringFromClass([SPFCustomCell class])];
+    }
+    return _collectionView;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-
-    return [_records count];
+    return self.records.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    SPFCustomCell *cell = (SPFCustomCell *)[collectionView dequeueReusableCellWithReuseIdentifier: @"SPFCellIdentifier" forIndexPath:indexPath];
-    SPFPicture *photo = _records[indexPath.item];
+    SPFCustomCell *cell = (SPFCustomCell *)[collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SPFCustomCell class]) forIndexPath:indexPath];
     
-    if (!(_operation.downloadsInProgress[indexPath])){
+    SPFPicture *photo = self.records[indexPath.item];
+    //UIActivityIndicatorView *indicator;
+
+    if (!(self.operation.downloadsInProgress[indexPath])){
         [photo correctPictureState];
+        
+        if (photo.imageState == Downloaded){
+            UIImage *tmpImg = [photo.imgURL getImageFromCache];
+            tmpImg = [tmpImg imageByCroppingImage];
+            cell.imgView.image = tmpImg;
+            cell.clipsToBounds = YES;
+        }
+        if (photo.imageState == New){
+            cell.imgView.image =nil;
+        }
     }
     
-    if (photo.imageState == New){
+    if (photo.imageState ==  Failed){
+        [cell.spinner stopAnimating];
+    } else if (photo.imageState == New){
+        [cell.spinner startAnimating];
+    } else if (photo.imageState == Downloaded){
+        [cell.spinner stopAnimating];
+    }
+    
+    if (!(self.collectionView.isDragging || self.collectionView.isDecelerating)) {
         [self startOPerationsForPhotoRecord:photo byIndex:indexPath];
-        
-    } else {
-        UIImage *tmpImg = [photo.imgURL getImageFromCache];
-        tmpImg = [tmpImg imageByCroppingImage];
-        
-        UIGraphicsBeginImageContext(CGSizeMake( cell.frame.size.width, cell.frame.size.height));
-        [tmpImg drawInRect: CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height)];
-        UIImage *small = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        
-        UIImageView *cellImageView = [[UIImageView alloc] initWithImage:small];
-        cell.backgroundColor = [UIColor whiteColor];
-        cell.clipsToBounds = YES;
-        [cell.contentView addSubview:cellImageView];
     }
     return cell;
 }
@@ -165,8 +178,7 @@
 }
 
 - (void) startDownLoadForPhoto:(SPFPicture*)pic byIndex:(NSIndexPath*)indexPass{
-    
-    if (_operation.downloadsInProgress[indexPass]){
+    if (self.operation.downloadsInProgress[indexPass]){
         return;
     }
     
@@ -178,8 +190,8 @@
         });
     }];
     
-    _operation.downloadsInProgress[indexPass] = downloader;
-    [_operation.downloadQueue addOperation:downloader];
+    self.operation.downloadsInProgress[indexPass] = downloader;
+    [self.operation.downloadQueue addOperation:downloader];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -196,20 +208,20 @@
     }
 }
 
-- (void) startGetListOfPictures:(NSString*)searchText andPage:(int)page{
-    NSLog(@"startGetList %@", searchText);
+- (void) startGetListOfPictures:(NSString*)searchText andPage:(long)page{
     
-    SPFGetListOfPicturesOperation *downloader = [[SPFGetListOfPicturesOperation alloc] initWithSearch:searchText andPage:1];
-    
-    downloader.pictures = [[NSMutableArray alloc] init];
-    
-    downloader.completionBlock = ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            _records = downloader.pictures;
-            [_collectionView reloadData];
-            });
-
-    };
+    SPFGetListOfPicturesOperation *downloader = [[SPFGetListOfPicturesOperation alloc] initWithSearch:searchText andPage:page andBlock:^(NSArray *data, NSError *error) {
+        if (page == 1){
+            self.records = data;
+        } else {
+            NSMutableArray *tmpArray = [[NSMutableArray alloc] initWithArray:self.records];
+            [tmpArray addObjectsFromArray:data];
+            self.records = [tmpArray copy];
+            tmpArray = nil;
+            loadingNewPage = NO;
+        }
+        [self.collectionView reloadData];
+    }];
     
     [_operation.downloadQueue addOperation:downloader];
 }
@@ -227,6 +239,41 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void) scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    if (!loadingNewPage){
+        CGPoint offset = scrollView.contentOffset;
+        CGRect bounds = scrollView.bounds;
+        CGSize size = scrollView.contentSize;
+        UIEdgeInsets inset = scrollView.contentInset;
+        float y = offset.y + bounds.size.height - inset.bottom;
+        float h = size.height;
+        
+        float reload_distance = 40;
+        if(y > h + reload_distance) {
+            loadingNewPage = YES;
+            long currentPage = [_searchObject[@"page"] integerValue];
+            [_searchObject setValue:@(currentPage + 1) forKey:@"page"];
+            [self startGetListOfPictures:self.searchText andPage:currentPage+1];
+        }
+    }
+}
+
+- (void) scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    NSLog(@"scrollViewWillBeginDragging");
+    for (NSIndexPath *indexPath in _operation.downloadsInProgress){
+        SPFDownloadingPictureOperation *operation = (SPFDownloadingPictureOperation*)_operation.downloadsInProgress[indexPath];
+        operation.queuePriority = NSOperationQueuePriorityVeryLow;
+    }
+}
+
+- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSLog(@"scrollViewDidEndDecelerating");
+    NSArray *visCells = [self.collectionView indexPathsForVisibleItems];
+    [self.collectionView reloadItemsAtIndexPaths:visCells];
 }
 
 @end

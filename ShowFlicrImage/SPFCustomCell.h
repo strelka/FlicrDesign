@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SPFCustomCell : UICollectionViewCell
-@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UIImageView *imgView;
 @property (nonatomic, strong) UIActivityIndicatorView *spinner;
 
 @end

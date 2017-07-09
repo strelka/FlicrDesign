@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 @class SPFPicture;
 
+typedef void(^successBlock) (NSArray *, NSError *);
+
 @interface SPFGetListOfPicturesOperation : NSOperation<NSURLSessionDataDelegate>
-@property(nonatomic, strong) NSMutableArray<SPFPicture*> *pictures;
-- (instancetype) initWithSearch:(NSString*)text andPage:(int)page;
+- (instancetype) initWithSearch:(NSString*)text
+                        andPage:(long)page
+                       andBlock:(successBlock)successBlock;
 @end

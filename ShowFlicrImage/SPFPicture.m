@@ -9,16 +9,27 @@
 #import "SPFPicture.h"
 #import "NSURL+Caching.h"
 
+static NSString *const urlTemplate = @"https://farm%@.staticflickr.com/%@/%@_%@.jpg";
 @implementation SPFPicture
 
-- (instancetype) initWithUrl:(NSURL*)url{
+- (instancetype) initWithJSONData:(NSDictionary *)json{
     self = [super init];
     if (self){
-        _imgURL = url;
+        _idImg = json[@"id"];
+        _imgURL = [self generateURL:json];
         _imageState = New;
         _countLikes = 0;
     }
     return self;
+}
+
+
+- (NSURL *)generateURL:(NSDictionary *)json{
+    NSString *urlString = [[NSString alloc] initWithFormat: urlTemplate, json[@"farm"], json[@"server"], json[@"id"], json[@"secret"]];
+    
+    NSString *normalUrlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    
+    return [[NSURL alloc] initWithString:normalUrlString];
 }
 
 - (void) correctPictureState{
