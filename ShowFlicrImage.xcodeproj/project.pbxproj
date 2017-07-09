@@ -18,13 +18,10 @@
 		922452461EDB00A60020BCB0 /* SPFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9224523E1EDB00A60020BCB0 /* SPFViewController.m */; };
 		9224524A1EDB38430020BCB0 /* PinterestLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452491EDB38430020BCB0 /* PinterestLayout.m */; };
 		922452561EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452551EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m */; };
-		922452591EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452581EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m */; };
 		9224525F1EDF0B730020BCB0 /* SPFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9224525E1EDF0B730020BCB0 /* SPFDetailViewController.m */; };
-		922452621EDF26540020BCB0 /* SPFGetDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452611EDF26540020BCB0 /* SPFGetDetailInfo.m */; };
 		922452651EDF311F0020BCB0 /* SPFCustomCellImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452641EDF311F0020BCB0 /* SPFCustomCellImage.m */; };
 		922452681EDF4D000020BCB0 /* SPFDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452671EDF4D000020BCB0 /* SPFDetailView.m */; };
 		9242F98F1EE57021007FA9A8 /* UIImage+CroppingImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9242F98E1EE57021007FA9A8 /* UIImage+CroppingImage.m */; };
-		92507C331F0A904300645D95 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 92507C321F0A904300645D95 /* CoreDataStack.m */; };
 		92507C351F0A93CE00645D95 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92507C341F0A93CE00645D95 /* CoreData.framework */; };
 		92ABCA7B1EE014DF00C2F52B /* SPFTopNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABCA7A1EE014DF00C2F52B /* SPFTopNavigationView.m */; };
 		92ABCA841EE1413600C2F52B /* SPFCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ABCA831EE1413600C2F52B /* SPFCommentCell.m */; };
@@ -71,20 +68,14 @@
 		922452491EDB38430020BCB0 /* PinterestLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinterestLayout.m; sourceTree = "<group>"; };
 		922452541EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFGetListOfPicturesOperation.h; path = ShowFlicrImage/SPFGetListOfPicturesOperation.h; sourceTree = "<group>"; };
 		922452551EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFGetListOfPicturesOperation.m; path = ShowFlicrImage/SPFGetListOfPicturesOperation.m; sourceTree = "<group>"; };
-		922452571EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFGetFavoriteCountOperation.h; sourceTree = "<group>"; };
-		922452581EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFGetFavoriteCountOperation.m; sourceTree = "<group>"; };
 		9224525D1EDF0B730020BCB0 /* SPFDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFDetailViewController.h; path = ShowFlicrImage/SPFDetailViewController.h; sourceTree = "<group>"; };
 		9224525E1EDF0B730020BCB0 /* SPFDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFDetailViewController.m; path = ShowFlicrImage/SPFDetailViewController.m; sourceTree = "<group>"; };
-		922452601EDF26540020BCB0 /* SPFGetDetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFGetDetailInfo.h; sourceTree = "<group>"; };
-		922452611EDF26540020BCB0 /* SPFGetDetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFGetDetailInfo.m; sourceTree = "<group>"; };
 		922452631EDF311F0020BCB0 /* SPFCustomCellImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFCustomCellImage.h; sourceTree = "<group>"; };
 		922452641EDF311F0020BCB0 /* SPFCustomCellImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFCustomCellImage.m; sourceTree = "<group>"; };
 		922452661EDF4D000020BCB0 /* SPFDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFDetailView.h; sourceTree = "<group>"; };
 		922452671EDF4D000020BCB0 /* SPFDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFDetailView.m; sourceTree = "<group>"; };
 		9242F98D1EE57021007FA9A8 /* UIImage+CroppingImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CroppingImage.h"; sourceTree = "<group>"; };
 		9242F98E1EE57021007FA9A8 /* UIImage+CroppingImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CroppingImage.m"; sourceTree = "<group>"; };
-		92507C311F0A904300645D95 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
-		92507C321F0A904300645D95 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		92507C341F0A93CE00645D95 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		92ABCA791EE014DF00C2F52B /* SPFTopNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFTopNavigationView.h; sourceTree = "<group>"; };
 		92ABCA7A1EE014DF00C2F52B /* SPFTopNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFTopNavigationView.m; sourceTree = "<group>"; };
@@ -206,8 +197,6 @@
 				92ABCA8C1EE164CC00C2F52B /* SPFGetCommentsOperation.m */,
 				92ABCA941EE2052800C2F52B /* SPFGetDetailsOperation.h */,
 				92ABCA951EE2052800C2F52B /* SPFGetDetailsOperation.m */,
-				92507C311F0A904300645D95 /* CoreDataStack.h */,
-				92507C321F0A904300645D95 /* CoreDataStack.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -226,8 +215,6 @@
 				92ABCA801EE1385A00C2F52B /* Model */,
 				92ABCA7E1EE137C900C2F52B /* Controller */,
 				92ABCA7D1EE1377E00C2F52B /* View */,
-				922452601EDF26540020BCB0 /* SPFGetDetailInfo.h */,
-				922452611EDF26540020BCB0 /* SPFGetDetailInfo.m */,
 				92B58A5A1EDA0796009E470D /* ShowFlicrImage */,
 				92B58A591EDA0796009E470D /* Products */,
 				9D73C6BCB3C3544123FD44AF /* Pods */,
@@ -255,8 +242,6 @@
 				92B58A6A1EDA0796009E470D /* Assets.xcassets */,
 				92B58A6F1EDA0796009E470D /* Info.plist */,
 				92B58A5B1EDA0796009E470D /* Supporting Files */,
-				922452571EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.h */,
-				922452581EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m */,
 			);
 			path = ShowFlicrImage;
 			sourceTree = "<group>";
@@ -419,12 +404,10 @@
 				92B58A661EDA0796009E470D /* SecondViewController.m in Sources */,
 				92ABCA9C1EE414BD00C2F52B /* SPFPinchViewController.m in Sources */,
 				92ABCA901EE16A9E00C2F52B /* SPFComment.m in Sources */,
-				92507C331F0A904300645D95 /* CoreDataStack.m in Sources */,
 				9224523F1EDB00A60020BCB0 /* NSCacheSingleton.m in Sources */,
 				922452401EDB00A60020BCB0 /* SPFCustomCell.m in Sources */,
 				922452651EDF311F0020BCB0 /* SPFCustomCellImage.m in Sources */,
 				922452451EDB00A60020BCB0 /* SPFPicture.m in Sources */,
-				922452621EDF26540020BCB0 /* SPFGetDetailInfo.m in Sources */,
 				92B58A601EDA0796009E470D /* AppDelegate.m in Sources */,
 				92ABCA961EE2052800C2F52B /* SPFGetDetailsOperation.m in Sources */,
 				922452421EDB00A60020BCB0 /* SPFFiltrationPictureOperation.m in Sources */,
@@ -432,7 +415,6 @@
 				92ABCA841EE1413600C2F52B /* SPFCommentCell.m in Sources */,
 				922452681EDF4D000020BCB0 /* SPFDetailView.m in Sources */,
 				92ABCA8D1EE164CC00C2F52B /* SPFGetCommentsOperation.m in Sources */,
-				922452591EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m in Sources */,
 				92ABCA8A1EE150F100C2F52B /* NSURL+Caching.m in Sources */,
 				922452441EDB00A60020BCB0 /* SPFPendingOperations.m in Sources */,
 				A84D13831F0E601A00DFD3BE /* SPFCoreDataService.m in Sources */,
@@ -549,7 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P85JQ5XGQC;
 				INFOPLIST_FILE = ShowFlicrImage/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.ShowFlicrImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -563,7 +545,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P85JQ5XGQC;
 				INFOPLIST_FILE = ShowFlicrImage/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.ShowFlicrImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";

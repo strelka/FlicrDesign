@@ -10,8 +10,8 @@
 @import CoreData;
 @class SPFPicture;
 @class SPFPictureModel;
-typedef void(^block) (NSArray *);
 
+typedef void(^block) (NSArray *);
 @interface SPFCoreDataService : NSObject
 - (void)getFavoritePicturesWithCompletionBlock:(block) block;
 - (void)setPictureToFavorite:(SPFPicture *) picture;

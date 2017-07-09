@@ -13,7 +13,7 @@
 - (void) cachingImage:(UIImage*)image{
     NSString *urlString = [[NSString alloc] initWithFormat:@"%@", self];
     [[NSCacheSingleton sharedCache].imageCache setObject:image forKey:urlString];
-    NSLog(@"caching %@", self);
+    //NSLog(@"caching %@", self);
 }
 
 - (UIImage*) getImageFromCache{

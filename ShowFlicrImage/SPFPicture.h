@@ -14,7 +14,6 @@
 typedef NS_ENUM(NSInteger, spfImageState){
     New = 1,
     Downloaded = 2,
-    Favorite = 3,
     Failed = 4
 };
 
@@ -32,6 +31,6 @@ typedef NS_ENUM(NSInteger, spfImageState){
 
 @property (nonatomic) spfImageState imageState;
 
-- (instancetype) initWithUrl:(NSURL*)url;
+- (instancetype) initWithJSONData:(NSDictionary *)json;
 - (void) correctPictureState;
 @end
