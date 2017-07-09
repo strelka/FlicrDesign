@@ -71,6 +71,24 @@
     }
 }
 
+- (void) removePicturesFromFavorite:(NSArray<NSString *> *)picturesId{
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"idImg in %@", picturesId];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:self.pictureEntity.name];
+    fetchRequest.predicate = predicate;
+    NSBatchDeleteRequest *deleteReq = [[NSBatchDeleteRequest alloc] initWithFetchRequest:fetchRequest];
+    deleteReq.resultType = NSBatchDeleteResultTypeCount;
+    
+    NSError *error = nil;
+    NSBatchDeleteResult *deletedResult = [self.coreDataStack.managedObjectContext executeRequest:deleteReq error:&error];
+    if (error){
+        NSLog(@"Unable to delete the data");
+    } else {
+        NSLog(@"%@ deleted", deletedResult.result);
+    }
+}
+
+
 - (void)mapPicture:(SPFPicture *)picture ToPictureModel:(SPFPictureModel *)model{
     model.idImg = picture.idImg;
     model.imgURL = [[NSString alloc] initWithFormat:@"%@", picture.imgURL];
@@ -86,7 +104,6 @@
 - (void)getFavoritePicturesWithCompletionBlock:(block) block{
  
     NSManagedObjectContext *context = self.coreDataStack.managedObjectContext;
-    
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:self.pictureEntity.name];
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"saveTimeInterval" ascending:NO];
     request.sortDescriptors = @[descriptor];

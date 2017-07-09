@@ -19,7 +19,6 @@
 		9224524A1EDB38430020BCB0 /* PinterestLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452491EDB38430020BCB0 /* PinterestLayout.m */; };
 		922452561EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452551EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m */; };
 		922452591EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452581EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m */; };
-		9224525C1EDCC6F40020BCB0 /* SPFDispetcherOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9224525B1EDCC6F40020BCB0 /* SPFDispetcherOperation.m */; };
 		9224525F1EDF0B730020BCB0 /* SPFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9224525E1EDF0B730020BCB0 /* SPFDetailViewController.m */; };
 		922452621EDF26540020BCB0 /* SPFGetDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452611EDF26540020BCB0 /* SPFGetDetailInfo.m */; };
 		922452651EDF311F0020BCB0 /* SPFCustomCellImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 922452641EDF311F0020BCB0 /* SPFCustomCellImage.m */; };
@@ -74,8 +73,6 @@
 		922452551EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFGetListOfPicturesOperation.m; path = ShowFlicrImage/SPFGetListOfPicturesOperation.m; sourceTree = "<group>"; };
 		922452571EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFGetFavoriteCountOperation.h; sourceTree = "<group>"; };
 		922452581EDCB6CE0020BCB0 /* SPFGetFavoriteCountOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFGetFavoriteCountOperation.m; sourceTree = "<group>"; };
-		9224525A1EDCC6F40020BCB0 /* SPFDispetcherOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFDispetcherOperation.h; path = ShowFlicrImage/SPFDispetcherOperation.h; sourceTree = "<group>"; };
-		9224525B1EDCC6F40020BCB0 /* SPFDispetcherOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFDispetcherOperation.m; path = ShowFlicrImage/SPFDispetcherOperation.m; sourceTree = "<group>"; };
 		9224525D1EDF0B730020BCB0 /* SPFDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPFDetailViewController.h; path = ShowFlicrImage/SPFDetailViewController.h; sourceTree = "<group>"; };
 		9224525E1EDF0B730020BCB0 /* SPFDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPFDetailViewController.m; path = ShowFlicrImage/SPFDetailViewController.m; sourceTree = "<group>"; };
 		922452601EDF26540020BCB0 /* SPFGetDetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFGetDetailInfo.h; sourceTree = "<group>"; };
@@ -205,8 +202,6 @@
 				9224523A1EDB00A60020BCB0 /* SPFPendingOperations.m */,
 				922452541EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.h */,
 				922452551EDCAB6E0020BCB0 /* SPFGetListOfPicturesOperation.m */,
-				9224525A1EDCC6F40020BCB0 /* SPFDispetcherOperation.h */,
-				9224525B1EDCC6F40020BCB0 /* SPFDispetcherOperation.m */,
 				92ABCA8B1EE164CC00C2F52B /* SPFGetCommentsOperation.h */,
 				92ABCA8C1EE164CC00C2F52B /* SPFGetCommentsOperation.m */,
 				92ABCA941EE2052800C2F52B /* SPFGetDetailsOperation.h */,
@@ -429,7 +424,6 @@
 				922452401EDB00A60020BCB0 /* SPFCustomCell.m in Sources */,
 				922452651EDF311F0020BCB0 /* SPFCustomCellImage.m in Sources */,
 				922452451EDB00A60020BCB0 /* SPFPicture.m in Sources */,
-				9224525C1EDCC6F40020BCB0 /* SPFDispetcherOperation.m in Sources */,
 				922452621EDF26540020BCB0 /* SPFGetDetailInfo.m in Sources */,
 				92B58A601EDA0796009E470D /* AppDelegate.m in Sources */,
 				92ABCA961EE2052800C2F52B /* SPFGetDetailsOperation.m in Sources */,

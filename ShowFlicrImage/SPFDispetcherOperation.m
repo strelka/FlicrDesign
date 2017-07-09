@@ -11,7 +11,7 @@
 
 @class SPFPicture;
 @interface SPFDispetcherOperation()
-@property(nonatomic, strong) NSArray<SPFPicture*> *pictures;
+@property(nonatomic, strong) NSMutableArray<SPFPicture*> *pictures;
 @end
 @implementation SPFDispetcherOperation
 {
@@ -20,7 +20,7 @@
 - (instancetype) initWithPictures:(NSArray<SPFPicture*>*)array{
     self = [super init];
     if (self){
-        _pictures = array;
+        _pictures = [array mutableCopy];
         
     }
     return self;
